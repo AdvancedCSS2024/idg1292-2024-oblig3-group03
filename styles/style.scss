@@ -166,13 +166,14 @@ body {
 }
 
 .window {
-    margin: 2vw;
-    width: 13vw;
-    height: 13vw;
+    margin: 20px;
+    width: 24vh;
+    height: 24vh;
     position: relative;
 
     &-wrapper {
         position: absolute;
+        z-index: 2;
     }
 
     &__top {
@@ -180,21 +181,21 @@ body {
         background-color: black;
         width: 100%;
 
-        height: 1vw;
+        height: 4%;
     }
 
     &__bottom {
         position: absolute;
         background-color: black;
         width: 100%;
-        height: 1vw;
+        height: 4%;
         bottom: 0;
     }
 
     &__right {
         position: absolute;
         background-color: black;
-        width: 1vw;
+        width: 4%;
         height: 100%;
         right: 0;
     }
@@ -202,67 +203,143 @@ body {
     &__left {
         position: absolute;
         background-color: black;
-        width: 1vw;
+        width: 4%;
         height: 100%;
-        top: 1;
+    
     }
 
     &__horizontal {
         position: absolute;
         background-color: black;
         width: 100%;
-        height: 1vw;
+        height: 4%;
         top: 47%;
     }
 
     &__vertical {
         position: absolute;
         background-color: black;
-        width: 1vw;
+        width: 4%;
         height: 100%;
         top: 1;
         left: 47%;
     }
   }
 
+@keyframes snowing {
+    0% {transform: translateY(-10%);}
+    50% {transform: translateY(225%);}
+    100% {transform: translateY(445%);}
+}
+
+
+
 .snowflakes {
+    margin: 20px;
+    width: 24vh;
+    height: 24vh;
+    top: 3vh;
     position: relative;
-    width: 13vw;
-    height: 13vw;
+    background-color: white;
+
+    &-wrapper {
+        position: absolute;
+        z-index: 1;
+    }
 
     .snowflakes1 {
         position: absolute;
         width: 12%;
         left: 15%;
         top: 17%;
+
+        animation: snowing 5s ease-in-out infinite;
     }
 
     .snowflakes2 {
         position: absolute;
         width: 12%;
         left: 28%;
-        top: 18%;
+        top: 17%;
+
+        animation: snowing 10s linear infinite;
     }
 
     .snowflakes3 {
         position: absolute;
-        width: 15%;
+        width: 13%;
         left: 20%;
-        top: 60%;
+        top: 17%;
+
+        animation: snowing 7s linear infinite;
     }
 
     .snowflakes4 {
         position: absolute;
         width: 12%;
-        left: 87%;
+        left: 76%;
         top: 17%;
+
+        animation: snowing 3s linear infinite;
     }
 
     .snowflakes5 {
         position: absolute;
         width: 10%;
-        left: 89%;
-        top: 65%;
+        left: 82%;
+        top: 17%;
+
+        animation: snowing 7s linear infinite;
+    }
+
+    
+    .snowflakes6 {
+        position: absolute;
+        width: 10%;
+        left: 79%;
+        top: 17%;
+
+        animation: snowing 7s ease-out infinite;
+    }
+
+    
+    .snowflakes7 {
+        position: absolute;
+        width: 8%;
+        left: 86%;
+        top: 17%;
+
+        animation: snowing 10s linear infinite;
+    }
+
+    
+    .snowflakes8 {
+        position: absolute;
+        width: 6%;
+        left: 25%;
+        top: 17%;
+
+        animation: snowing 10s ease-in-out infinite;
+    }
+
+    
+    .snowflakes9 {
+        position: absolute;
+        width: 10%;
+        left: 55%;
+        top: 17%;
+
+        animation: snowing 4s linear infinite;
+    }
+
+    
+    .snowflakes10 {
+        position: absolute;
+        width: 8%;
+        left: 75%;
+        top: 17%;
+
+        animation: snowing 3s ease-out infinite;
     }
 }
 
