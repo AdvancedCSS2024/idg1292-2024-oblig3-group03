@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 #frame2 {
@@ -316,4 +317,16 @@ body {
   bottom: 0;
   background-image: url("../assets/woodfloor.avif");
   background-size: 100% 100%;
+}
+
+.frame2__open {
+  transform: scale(18) translate(0, 0);
+  transform-origin: 30px 30px;
+  transition: transform 5s;
+}
+
+.title {
+  font-size: 0.5rem;
+  margin: 20px 0 0 10px;
+  transition: opacity 0.5s;
 }/*# sourceMappingURL=style.css.map */
