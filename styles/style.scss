@@ -255,7 +255,7 @@ body {
         left: 15%;
         top: 17%;
 
-        animation: snowing 5s ease-in-out infinite;
+        animation: snowing 5s ease-out infinite;
     }
 
     .snowflakes2 {
@@ -355,6 +355,7 @@ body {
     background-size: 100% 100%;
 }
 
+
 .frame2__open {
     transform: scale(18) translate(0, 0);
     transform-origin: 30px 30px;
@@ -366,3 +367,45 @@ body {
     margin: 20px 0 0 10px;
     transition: opacity .5s;
 }
+
+//frame 3
+#frame3 {
+    height: 100vh;
+    position: relative;
+    background-color: beige;
+    background-image: url("../assets/wallpaper.jpg");
+    background-size: 50% 50%;
+}
+.dollar { 
+    margin: 20px;
+    width: 24vh;
+    height: 24vh;
+    position: relative;
+
+    &-wrapper {
+        position: absolute;
+    }
+
+    .dollar1 {
+        position: absolute;
+        width: 10%;
+        left: 55%;
+        top: 17%;
+    }
+
+    .dollar2 {
+        position: absolute;
+        width: 10%;
+        left: 75%;
+        top: 17%;
+    }
+
+    .dollar3 {
+        position: absolute;
+        width: 10%;
+        left: 85%;
+        top: 17%;
+    }
+}
+
+
