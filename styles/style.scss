@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 #frame2 {
@@ -354,6 +355,19 @@ body {
     background-size: 100% 100%;
 }
 
+
+.frame2__open {
+    transform: scale(18) translate(0, 0);
+    transform-origin: 30px 30px;
+    transition: transform 5s;
+}
+
+.title {
+    font-size: .5rem;
+    margin: 20px 0 0 10px;
+    transition: opacity .5s;
+}
+
 //frame 3
 #frame3 {
     height: 100vh;
@@ -393,4 +407,5 @@ body {
         top: 17%;
     }
 }
+
 
