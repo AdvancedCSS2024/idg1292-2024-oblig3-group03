@@ -8,3 +8,9 @@ We started the project using group3-temp, as we had some trouble creating a grou
 
 We used CSS drawing to create the lamp and the window in frame2.
 Keyframe animations were used to make the snow fall outside the window. We also used z-index to place the snowflakes behind the window screen.
+
+Sources:
+
+Wooden floor texture: https://free-3dtextureshd.com/download/natural-wooden-floor-parquet-raw-texture-free-download-background-high-resolution-15/
+
+Wallpaper texture: https://www.deviantart.com/fabooguy/art/Rough-Wallpaper-Texture-Tileable-2048x2048-421889537
