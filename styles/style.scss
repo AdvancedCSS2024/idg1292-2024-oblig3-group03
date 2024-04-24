@@ -227,9 +227,9 @@ body {
   }
 
 @keyframes snowing {
-    0% {transform: translateY(-10%);}
+    0% {transform: translateY(-200%);}
     50% {transform: translateY(225%);}
-    100% {transform: translateY(445%);}
+    100% {transform: translateY(745%);}
 }
 
 
@@ -238,9 +238,10 @@ body {
     margin: 20px;
     width: 24vh;
     height: 24vh;
-    top: 3vh;
+    top: -40vh;
     position: relative;
     background-color: white;
+    overflow: hidden;
 
     &-wrapper {
         position: absolute;
