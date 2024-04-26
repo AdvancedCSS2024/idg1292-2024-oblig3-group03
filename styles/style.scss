@@ -408,6 +408,7 @@ body {
     background-image: url("../assets/wallpaper.jpg");
     background-size: 50% 50%;
 }
+
 .dollar { 
     margin: 20px;
     width: 24vh;
@@ -421,7 +422,7 @@ body {
     .dollar1 {
         position: absolute;
         width: 10%;
-        left: 55%;
+        left: 65%;
         top: 17%;
     }
 
@@ -437,6 +438,22 @@ body {
         width: 10%;
         left: 85%;
         top: 17%;
+    }
+}
+
+.chart {
+    width: 30vh;
+    height: 30vh;
+    border: 3px solid #66462C;
+    border-radius: 5px;;
+    background-color: white;
+    position: absolute;
+    right: 20%;
+    top: 10%;
+
+    &>p {
+        position: absolute;
+        left: 27%;
     }
 }
 
@@ -457,5 +474,3 @@ body {
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
     animation: flicker 3s steps(1) infinite;
 }
-
-
