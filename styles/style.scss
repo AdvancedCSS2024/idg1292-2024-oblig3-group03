@@ -1,14 +1,44 @@
 body {
     margin: 0;
     overflow-x: hidden;
+    height: 500vh;
+    width: 100vw;
+}
+
+#fixedPoint {
+    position: fixed;
+    width: 100vw;
+    height: 20px;
+}
+
+#startFrame1 {
+    width: 100vw;
+    height: 150vh;
+}
+
+#startFrame2 {
+    width: 100vw;
+    height: 150vh;
+    position: absolute;
+}
+
+#frames {
+    position: fixed;
 }
 
 #frame2 {
     height: 100vh;
+    width: 100vw;
     position: relative;
     background-color: beige;
     background-image: url("../assets/wallpaper.jpg");
     background-size: 50% 50%;
+    
+    transform-origin: 30px 30px;
+}
+
+.frame2__transition {
+    transition: transform 3s;
 }
 
 .lamp {
@@ -356,16 +386,18 @@ body {
 }
 
 
-.frame2__open {
+.frame2__closed {
     transform: scale(18) translate(0, 0);
-    transform-origin: 30px 30px;
-    transition: transform 5s;
 }
 
 .title {
     font-size: .5rem;
     margin: 20px 0 0 10px;
     transition: opacity .5s;
+
+    &__closed {
+        opacity: 0;
+    }
 }
 
 //frame 3
@@ -425,3 +457,20 @@ body {
     }
 }
 
+@keyframes flicker {
+    0%, 79%, 85%, 95% {
+        color: #d2ef12;
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
+    }
+    
+    80%, 90%, 100% {
+        color: gray;
+        text-shadow: none;
+    }
+}
+
+.light-effect {
+    color: #d2ef12;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
+    animation: flicker 3s steps(1) infinite;
+}
