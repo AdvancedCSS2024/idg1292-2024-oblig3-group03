@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div id="frame2" class="frame2__open">
+    <div id="frame2">
       <div class="window-wrapper">
       <div class="window">
         <div class="window__top"></div>
@@ -436,24 +436,45 @@
 <!--FRAME 3-->
 <div id="frame3">
   
-  <div class="dollar-wrapper">
-  <div class="dollar">
-      <div class="dollar1">
-        <img src="assets/dollar.svg" alt="Dollar">
+
+  <div class="chart">
+    <p>Electricity-bill</p>
+    <div class="dollar-wrapper">
+      <div class="dollar">
+          <div class="dollar1">
+            <img src="assets/dollar.svg" alt="Dollar">
+          </div>
+    
+          <div class="dollar2">
+            <img src="assets/dollar.svg" alt="Dollar">
+          </div>
+    
+          <div class="dollar3">
+            <img src="assets/dollar.svg" alt="Dollar">
+          </div>
+        </div>
       </div>
 
-      <div class="dollar2">
-        <img src="assets/dollar.svg" alt="Dollar">
-      </div>
-
-      <div class="dollar3">
-        <img src="assets/dollar.svg" alt="Dollar">
-      </div>
-    </div>
+      <!--ARROW IN CHART-->
+      <svg class="arrow" width="300" height="300" viewBox="0 0 300 300">
+        <line x1="5" y1="200" x2="35" y2="130"
+          style="fill: none; stroke: rgb(255, 0, 0); stroke-width: 2px;">
+        </line>
+        <line x1="35" y1="130" x2="60" y2="150"
+          style="fill: none; stroke: rgb(255, 0, 0); stroke-width: 2px;">
+        </line>
+        <line x1="60" y1="150" x2="85" y2="80"
+          style="fill: none; stroke: rgb(255, 0, 0); stroke-width: 2px;">
+        </line>
+        <line x1="95" y1="105" x2="85" y2="80"
+          style="fill: none; stroke: rgb(255, 0, 0); stroke-width: 2px;">
+        </line>
+        <line x1="60" y1="90" x2="85" y2="80"
+          style="fill: none; stroke: rgb(255, 0, 0); stroke-width: 2px;">
+        </line>
+      </svg>
   </div>
-
-  <div class="chart"></div>
-
+  <div class="floor"></div>
 
 </div>
 

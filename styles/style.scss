@@ -376,6 +376,7 @@ body {
     background-image: url("../assets/wallpaper.jpg");
     background-size: 50% 50%;
 }
+
 .dollar { 
     margin: 20px;
     width: 24vh;
@@ -389,7 +390,7 @@ body {
     .dollar1 {
         position: absolute;
         width: 10%;
-        left: 55%;
+        left: 65%;
         top: 17%;
     }
 
@@ -408,4 +409,19 @@ body {
     }
 }
 
+.chart {
+    width: 30vh;
+    height: 30vh;
+    border: 3px solid #66462C;
+    border-radius: 5px;;
+    background-color: white;
+    position: absolute;
+    right: 20%;
+    top: 10%;
+
+    &>p {
+        position: absolute;
+        left: 27%;
+    }
+}
 
