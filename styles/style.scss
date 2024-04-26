@@ -441,32 +441,12 @@ body {
 }
 
 @keyframes flicker {
-    0% {
+    0%, 79%, 85%, 95% {
         color: #d2ef12;
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
     }
-    79% {
-        color: #d2ef12;
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
-    }
-    80% {
-        color: gray;
-        text-shadow: none;
-    }
-
-    85% {
-        color: #d2ef12;
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
-    }
-    90% {
-        color: gray;
-        text-shadow: none;
-    }
-    95% {
-        color: #d2ef12;
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
-    }
-    100% {
+    
+    80%, 90%, 100% {
         color: gray;
         text-shadow: none;
     }
@@ -476,8 +456,6 @@ body {
     color: #d2ef12;
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
     animation: flicker 3s steps(1) infinite;
-    
-    
 }
 
 
