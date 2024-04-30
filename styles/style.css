@@ -19,7 +19,11 @@ body {
 #startFrame2 {
   width: 100vw;
   height: 150vh;
-  position: absolute;
+}
+
+#startFrame3 {
+  width: 100vw;
+  height: 150vh;
 }
 
 #frames {
@@ -170,8 +174,21 @@ body {
 
 #dad {
   left: 20vw;
+  z-index: 2;
 }
 
+.dad_walking {
+  animation: walking 3s infinite;
+}
+
+@keyframes walking {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    transform: translateY(15px) scaleX(-1);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateY(0) scaleX(-1);
+  }
+}
 #mom {
   right: 20vw;
 }
@@ -361,15 +378,6 @@ body {
   opacity: 0;
 }
 
-#frame3 {
-  height: 100vh;
-  position: relative;
-  background-color: beige;
-  background-image: url("../assets/wallpaper.jpg");
-  background-size: 50% 50%;
-  display: none;
-}
-
 .dollar {
   margin: 20px;
   width: 24vh;
@@ -405,12 +413,19 @@ body {
   border-radius: 5px;
   background-color: white;
   position: absolute;
-  right: 20%;
+  left: 35%;
   top: 10%;
+  z-index: 1;
+  transform: translateX(-100vw);
 }
 .chart > p {
   position: absolute;
   left: 27%;
+}
+
+.chartIn {
+  transform: translateX(0);
+  transition: transform 10s;
 }
 
 @keyframes flicker {
@@ -427,4 +442,9 @@ body {
   color: #d2ef12;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
   animation: flicker 3s steps(1) infinite;
+}
+
+.moveOut {
+  transform: translateX(100vw);
+  transition: transform 10s;
 }/*# sourceMappingURL=style.css.map */
