@@ -9,6 +9,10 @@ We started the project using group3-temp, as we had some trouble creating a grou
 We used CSS drawing to create the lamp and the window in frame2, and adobe illustrator to draw the family and the snowflakes. 
 Keyframe animations were used to make the snow fall outside the window. We also used z-index to place the snowflakes behind the window screen.
 
+Start: 
+Used JS to make the window appear bigger with the title "the lightswitch". When the user scroll down, the family image will appear.
+
+
 Frame 3:
 Adobe Illustrator to draw the dollar-signs, CSS drawing to draw the chartboard.
 For the arrow in the chart we used SVG drawing.
