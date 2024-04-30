@@ -177,6 +177,38 @@ body {
     left: 20vw;
 }
 
+.dad_walking {
+    animation: walking 3s infinite;
+}
+
+@keyframes walking {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(15px);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the smile path */
+.cls-3-dad-smile {
+    animation: changeSmile 10s forwards; /* Apply the animation named 'changeSmile' over 10 seconds */
+  }
+  
+  /* Define the keyframes for the animation */
+  @keyframes changeSmile {
+    0% {
+      /* Start with the smiling face */
+      d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94");
+    }
+    100% {
+      /* End with the frown face */
+      d: path("M63.65,94.53c6.96-11,22.61-15.28,34.16-9.27c3.83,1.97,7.16,4.95,9.55,8.56c-2.05-3.86-5.33-7.06-9.18-9.24c-11.63-6.59-28.33-2.02-34.52,9.94");
+    }
+  }
+  
+  
+
 #mom {
     right: 20vw;
 }
@@ -407,6 +439,7 @@ body {
     background-color: beige;
     background-image: url("../assets/wallpaper.jpg");
     background-size: 50% 50%;
+    display: none;
 }
 
 .dollar { 

@@ -34,3 +34,7 @@ const observer2 = new IntersectionObserver(entries => {
 
 observer1.observe(frame1);
 observer2.observe(frame2);
+
+
+
+
