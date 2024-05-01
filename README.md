@@ -17,6 +17,10 @@ Frame 3:
 Adobe Illustrator to draw the dollar-signs, CSS drawing to draw the chartboard.
 For the arrow in the chart we used SVG drawing.
 
+Used keyframes to change the smile of the people.
+
+Used intersectionObserver to change each "frame". 
+
 ##Storyboard: 
 
 Sources:
