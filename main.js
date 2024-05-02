@@ -100,14 +100,6 @@ const observer5 = new IntersectionObserver(entries => {
 
 
 
-/*const observer5 = new IntersectionObserver(entries => { 
-	entries.forEach(entry=>{
-		if(entry.intersectionRatio > 0.50){
-			
-		}
-	})
-}, options);*/
-
 
 observer1.observe(frame1);
 observer2.observe(frame2);
