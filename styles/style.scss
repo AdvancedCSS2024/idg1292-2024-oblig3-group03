@@ -195,7 +195,7 @@ body {
         transform: translateY(15px);
     }
     10%, 30%, 50%, 70%, 90% {
-        transform: translateY(0);
+        transform: translateY(0) scaleX(-1);
     }
 }
 
