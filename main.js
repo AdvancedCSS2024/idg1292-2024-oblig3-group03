@@ -14,6 +14,14 @@ const frame6 = document.querySelector("#startFrame6");
 const frame7 = document.querySelector("#startFrame7");
 const frame8 = document.querySelector("#startFrame8");
 const frame9 = document.querySelector("#startFrame9");
+
+const dad = document.querySelector("#dad");
+const mom = document.querySelector("#mom");
+const son = document.querySelector("#son");
+const daughter = document.querySelector("#daughter");
+const lamp = document.querySelector(".lamp");
+const snowflakes = document.querySelector(".snowflakes-wrapper");
+const chart = document.querySelector(".chart");
     
 const options = {
 	rootMargin: "-20px",
@@ -112,7 +120,36 @@ const observer5 = new IntersectionObserver(entries => {
             } , 1300);  
             setTimeout(() => {
                 document.querySelector("#d-right-arm").classList.remove("dad-right-arm");
+                document.querySelector("#frame2").style.filter = "brightness(0)";
+                document.querySelector("#frame2").style.transition = "filter 1s";
             } , 2000); 
+		}
+	})
+}, options);
+
+const observer6 = new IntersectionObserver(entries => { 
+	entries.forEach(entry=>{
+		if(entry.intersectionRatio > 0.50){
+            document.querySelector(".darkOverlay").style.background = "radial-gradient(#534a004d -10%, black)";
+            document.querySelector("#frame2").style.transition = "filter 2s";
+            document.querySelector("#frame2").style.filter = "brightness(1)";
+            document.querySelector(".table-with-candles").style.opacity = "1";
+            document.querySelector(".table-with-candles").style.filter = "drop-shadow(0px 5px 5px black) brightness(1)";
+
+            dad.classList.remove("dadTurnOffLamp");
+            dad.style.bottom = "22vh";
+            dad.style.left = "36vw";
+            mom.classList.remove("moveOut");
+            mom.style.bottom = "22vh";
+            mom.style.right = "37vw";
+            son.classList.remove("moveOut");
+            son.style.left = "43vw";
+            daughter.classList.remove("moveOut");
+            daughter.style.right = "45vw";
+            mom.style.transition = "none";
+            dad.style.transition = "none";
+            son.style.transition = "none";
+            daughter.style.transition = "none";
 		}
 	})
 }, options);
