@@ -14,6 +14,28 @@ body {
 #startFrame1, #startFrame2, #startFrame3, #startFrame4, #startFrame5, #startFrame6, #startFrame7, #startFrame8 {
     width: 100vw;
     height: 150vh;
+    position: relative;
+    z-index: 100;
+    font-size: 2rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.text {
+    left: 35%;
+    top: 10%;
+    width: 50%;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.textTwo {
+    left: 35%;
+    top: 10%;
+    width: 50%;
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
 }
 
 
@@ -214,7 +236,7 @@ body {
       d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94");
     }
     100% {
-      /* End with the frown face */
+      /* Ends with the frown face */
       d: path("M63.65,94.53c6.96-11,22.61-15.28,34.16-9.27c3.83,1.97,7.16,4.95,9.55,8.56c-2.05-3.86-5.33-7.06-9.18-9.24c-11.63-6.59-28.33-2.02-34.52,9.94");
     }
   }
@@ -579,3 +601,4 @@ body {
     z-index: 10;
     display: none;
 }
+

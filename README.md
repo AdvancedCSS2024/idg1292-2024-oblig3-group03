@@ -24,7 +24,7 @@ We used keyframes and intersection to make the father look sad.
 
 
 
-
+We used !important to get the dad to walk up to the lamp to turn it off. We realised that we used id's for the people, and therefore when we used class to transition the dad, the id would overrun it and therefor it would not work without using !important in dadTurnOffLamp.
 
 Used keyframes to change the smile of the people.
 

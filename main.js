@@ -117,6 +117,15 @@ const observer5 = new IntersectionObserver(entries => {
 	})
 }, options);
 
+const observer6 = new IntersectionObserver(entries => { 
+	entries.forEach(entry=>{
+		if(entry.intersectionRatio > 0.50){
+			document.querySelector("#mom-smile").classList.add("change-smile");
+			document.querySelector("#son-smile").classList.add("change-smile");
+			document.querySelector("#daughter-smile").classList.add("change-smile");
+		}
+	})
+}, options);
 
 
 
