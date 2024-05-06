@@ -150,10 +150,13 @@ const observer6 = new IntersectionObserver(entries => {
             dad.style.transition = "none";
             son.style.transition = "none";
             daughter.style.transition = "none";
+
+			document.querySelector("#mom-smile").classList.add("change-smile");
+			document.querySelector("#son-smile").classList.add("change-smile");
+			document.querySelector("#daughter-smile").classList.add("change-smile");
 		}
 	})
 }, options);
-
 
 
 
