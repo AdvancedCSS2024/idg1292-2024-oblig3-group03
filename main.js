@@ -58,13 +58,14 @@ const observer3 = new IntersectionObserver(entries => {
             document.querySelector(".window-wrapper").classList.add("moveOut");
             document.querySelector(".snowflakes-wrapper").classList.add("moveOut");
             document.querySelector(".chart").classList.add("chartIn");
+            document.querySelector(".floor").style.transform = "translateX(0)"
             setTimeout(() => {
                 document.querySelector("#dad").classList.remove("dad_walking");
 				document.querySelector("#dad-smile").classList.add("hide-smile");
 				document.querySelector("#gasping").classList.add("gasping-mouth");
 				document.querySelector("#d-right-arm").classList.add("dad-right-arm");
 				document.querySelector("#d-left-arm").classList.add("dad-left-arm");
-			} , 10000);			
+			} , 7000);			
             // maybe switch out this setTimeout with CSS keyframe animation duration (@keyframes walking).
 		}
 	})
@@ -78,6 +79,22 @@ const observer4 = new IntersectionObserver(entries => {
 			document.querySelector("#dad-smile").classList.add("change-smile");
 			document.querySelector("#d-right-arm").classList.remove("dad-right-arm");
 			document.querySelector("#d-left-arm").classList.remove("dad-left-arm");
+            document.querySelector("#dad").classList.add("dad_walking-backwards");
+            
+            document.querySelector(".lamp").classList.remove("moveOut");
+            document.querySelector(".window-wrapper").classList.remove("moveOut");
+            document.querySelector(".snowflakes-wrapper").classList.remove("moveOut");
+            document.querySelector(".chart").classList.remove("chartIn");
+            document.querySelector(".floor").style.transform = "translateX(-100vw)";
+
+            setTimeout(() => {
+                document.querySelector("#dad").classList.remove("dad_walking-backwards");
+                
+			} , 10000);
+            setTimeout(() => {
+                document.querySelector("#dad").classList.add("dadTurnOffLamp")
+            } , 7000);    
+
 		}
 	})
 }, options);
@@ -85,14 +102,17 @@ const observer4 = new IntersectionObserver(entries => {
 const observer5 = new IntersectionObserver(entries => { 
 	entries.forEach(entry=>{
 		if(entry.intersectionRatio > 0.50){
-			document.querySelector("#dad").classList.add("dad_walking-backwards");
-			document.querySelector(".lamp").classList.add("moveIn");
-            document.querySelector(".window-wrapper").classList.add("moveIn");
-            document.querySelector(".snowflakes-wrapper").classList.add("moveIn");
-			document.querySelector(".chart").classList.add("chartOut");
-			setTimeout(() => {
-                document.querySelector("#dad").classList.remove("dad_walking-backwards");
-			} , 10000);
+			document.querySelector("#d-right-arm").classList.add("dad-right-arm");
+            setTimeout(() => {
+                document.querySelector(".lamp").classList.add("lamp-off");
+            } , 1000);  
+            setTimeout(() => {
+                document.querySelector(".darkOverlay").style.display = "block";
+                document.querySelector("#frame2").style.filter = "brightness(0.5)";
+            } , 1300);  
+            setTimeout(() => {
+                document.querySelector("#d-right-arm").classList.remove("dad-right-arm");
+            } , 2000); 
 		}
 	})
 }, options);
