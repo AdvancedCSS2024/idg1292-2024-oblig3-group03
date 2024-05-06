@@ -41,6 +41,7 @@ body {
     left: 45%;
     height: 40vh;
     width: 40vh;
+    transition: transform 7s;
 
     &__wire {
         background-color: #000;
@@ -166,11 +167,12 @@ body {
     height: 35vh;
     bottom: 30vh;
     z-index: 4;
+    transition: transform 7s, left 3s, bottom 3s;
 }
 
 #dad {
     left: 20vw;
-    z-index: 2;
+    z-index: 3;
 }
 
 .dad_walking {
@@ -195,7 +197,7 @@ body {
         transform: translateY(15px);
     }
     10%, 30%, 50%, 70%, 90% {
-        transform: translateY(0) scaleX(-1);
+        transform: translateY(0);
     }
 }
 
@@ -227,6 +229,7 @@ body {
     height: 25vh;
     bottom: 30vh;
     z-index: 4;
+    transition: transform 7s;
 }
 
 #son {
@@ -246,6 +249,7 @@ body {
     &-wrapper {
         position: absolute;
         z-index: 2;
+        transition: transform 7s;
     }
 
     &__top {
@@ -318,6 +322,7 @@ body {
     &-wrapper {
         position: absolute;
         z-index: 1;
+        transition: transform 7s;
     }
 
     .snowflakes1 {
@@ -417,13 +422,15 @@ body {
 }
 
 .floor {
-    width: 100%;
+    width: 200%;
     height: 45vh;
     background-color: chocolate;
     position: absolute;
     bottom: 0;
     background-image: url("../assets/woodfloor.avif");
     background-size: 100% 100%;
+    transform: translateX(-100vw);
+    transition: transform 7s;
 }
 
 
@@ -484,6 +491,7 @@ body {
     top: 10%;
     z-index: 1;
     transform: translateX(-100vw);
+    transition: transform 7s;
 
     &>p {
         position: absolute;
@@ -497,16 +505,24 @@ body {
 }
 
 .gasping-mouth {    /* Dad's mouth, gasping */
-    position: absolute;
-    left:23.5%;
-    top:43%;
-    width: 2vh;
-    height: 1.5vh;
+    position: relative;
+    left:40%;
+    top:23%;
+    width: 12%;
+    height: 4%;
     border: 3px solid #000000;
     background-color: #000;
     border-radius: 35px;
 
     z-index: 5;
+}
+
+#gasping-wrapper {
+    width: 121.162px;
+    height: 35vh;
+    position: absolute;
+    left: 20vw;
+    bottom: 30vh;
 }
 
 .dad-right-arm { 
@@ -521,7 +537,7 @@ body {
 
 .chartIn {
     transform: translateX(0);
-    transition: transform 10s;
+    transition: transform 7s;
 }
 
 
@@ -547,6 +563,19 @@ body {
 
 .moveOut {
     transform: translateX(100vw);
-    transition: transform 10s;
+    
 }
 
+.dadTurnOffLamp {
+    left: 41vw!important;
+    bottom: 40vh!important;
+}
+
+.darkOverlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(transparent 50%, black);
+    z-index: 10;
+    display: none;
+}
