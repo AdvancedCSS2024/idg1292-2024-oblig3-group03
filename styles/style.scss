@@ -36,6 +36,7 @@ body {
     backdrop-filter: blur(10px);
     color: white;
     text-align: center;
+
 }
 
 
@@ -276,7 +277,7 @@ body {
 
     &__top {
         position: absolute;
-        background-color: black;
+        background-color: #555555;
         width: 100%;
 
         height: 4%;
@@ -284,7 +285,7 @@ body {
 
     &__bottom {
         position: absolute;
-        background-color: black;
+        background-color: #555555;
         width: 100%;
         height: 4%;
         bottom: 0;
@@ -292,7 +293,7 @@ body {
 
     &__right {
         position: absolute;
-        background-color: black;
+        background-color: #555555;
         width: 4%;
         height: 100%;
         right: 0;
@@ -300,7 +301,7 @@ body {
 
     &__left {
         position: absolute;
-        background-color: black;
+        background-color: #555555;
         width: 4%;
         height: 100%;
     
@@ -308,7 +309,7 @@ body {
 
     &__horizontal {
         position: absolute;
-        background-color: black;
+        background-color: #555555;
         width: 100%;
         height: 4%;
         top: 47%;
@@ -316,7 +317,7 @@ body {
 
     &__vertical {
         position: absolute;
-        background-color: black;
+        background-color: #555555;
         width: 4%;
         height: 100%;
         top: 1;
@@ -461,9 +462,15 @@ body {
 }
 
 .title {
-    font-size: .5rem;
+    font-size: 8rem;
     margin: 20px 0 0 10px;
-    transition: opacity .5s;
+    transition: opacity .2s;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
+    top: 30%;
+    font-family: Garamond;
 
     &__closed {
         opacity: 0;
@@ -600,5 +607,22 @@ body {
     background: radial-gradient(transparent 50%, black);
     z-index: 10;
     display: none;
+}
+
+
+#frame4 {
+    position: absolute;
+    bottom: 20vh;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.table-with-candles {
+    width: 70vh;
+    filter: drop-shadow(0px 5px 5px black) brightness(0);
+    opacity: 0;
+    transition: filter 2s;
 }
 
