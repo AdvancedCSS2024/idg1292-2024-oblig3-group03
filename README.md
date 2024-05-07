@@ -21,7 +21,8 @@ For the arrow in the chart we used SVG drawing.
 Transitioning to frame 4:
 We used keyframes and intersection to make the father look sad.
 
-
+Frame 7:
+Used transform translate to edit the arms on the family, so it looks like they are trying to keep warm on the candles.
 
 
 We used !important to get the dad to walk up to the lamp to turn it off. We realised that we used id's for the people, and therefore when we used class to transition the dad, the id would overrun it and therefor it would not work without using !important in dadTurnOffLamp.
@@ -37,3 +38,7 @@ Sources:
 Wooden floor texture: https://free-3dtextureshd.com/download/natural-wooden-floor-parquet-raw-texture-free-download-background-high-resolution-15/
 
 Wallpaper texture: https://www.deviantart.com/fabooguy/art/Rough-Wallpaper-Texture-Tileable-2048x2048-421889537
+
+UN global goals:
+https://www.jointsdgfund.org/sustainable-development-goals/goal-7-affordable-and-clean-energy
+https://www.globalgoals.org/take-action/

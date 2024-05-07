@@ -36,7 +36,6 @@ body {
     backdrop-filter: blur(10px);
     color: white;
     text-align: center;
-
 }
 
 
@@ -227,8 +226,8 @@ body {
 /* DAD */
 /* Apply the animation to the smile path */
 .change-smile  {
-    animation: changeSmile 0.1s forwards; /* Apply the animation named 'changeSmile' over 10 seconds */
-  }
+    animation: changeSmile 0.1s forwards; /* Apply the animation named 'changeSmile' over 0.1 seconds */
+}
   
   /* Define the keyframes for the animation */
   @keyframes changeSmile {
@@ -242,7 +241,20 @@ body {
     }
   }
 
+.change-smileChildren {
+    animation: changeSmileChildren 0.1s forwards; /* Apply the animation named 'changeSmileChildren' over 0.1 seconds */
+}
   
+@keyframes changeSmileChildren {
+    0% { /* Start with the smiling face */
+        d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94");
+    }
+    100% {
+        d: path("M35.50,64.43c5.5-8.5,16-12,24.5-7c1.5,0.75,2.75,1.88,3.75,3.25c-1-1.88-2.5-3.42-4.25-4.5c-8.25-4.19-20.25-1.25-24.5,7.5");
+    }
+}
+      
+
 #mom {
     right: 20vw;
 }
@@ -554,6 +566,7 @@ body {
     bottom: 30vh;
 }
 
+/* For when the dad sees the bill and gasping */
 .dad-right-arm { 
     transform-origin: center;
     transform: scale(90%, -90%) translate(3%, 20%);    
@@ -562,6 +575,48 @@ body {
 .dad-left-arm {
     transform-origin: center;
     transform: scale(90%, -90%) translate(-3%, 20%);
+}
+
+/* The family warming their hands on the candles */
+.father-right-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(25%, 20%) rotate(-50deg);
+}
+
+.father-left-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(25%, 10%) rotate(-80deg);
+}
+
+
+.mom-right-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(-35%, 10%) rotate(80deg);
+}
+
+.mom-left-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(-30%, 20%) rotate(65deg);
+}
+
+.son-right-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(3%, 20%);
+}
+
+.son-left-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(3%, 20%);
+}
+
+.daughter-right-arm {  
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(3%, 25%);
+}
+
+.daughter-left-arm {
+    transform-origin: center;
+    transform: scale(90%, -90%) translate(-3%, 25%);
 }
 
 .chartIn {

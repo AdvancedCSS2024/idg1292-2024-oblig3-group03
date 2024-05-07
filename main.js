@@ -152,12 +152,27 @@ const observer6 = new IntersectionObserver(entries => {
             daughter.style.transition = "none";
 
 			document.querySelector("#mom-smile").classList.add("change-smile");
-			document.querySelector("#son-smile").classList.add("change-smile");
-			document.querySelector("#daughter-smile").classList.add("change-smile");
+			document.querySelector("#son-smile").classList.add("change-smileChildren");
+			document.querySelector("#daughter-smile").classList.add("change-smileChildren");
 		}
 	})
 }, options);
 
+
+const observer7 = new IntersectionObserver(entries => { 
+	entries.forEach(entry=>{
+		if(entry.intersectionRatio > 0.50){
+			document.querySelector("#d-right-arm").classList.add("father-right-arm");
+			document.querySelector("#d-left-arm").classList.add("father-left-arm");
+			document.querySelector("#m-right-arm").classList.add("mom-right-arm");
+			document.querySelector("#m-left-arm").classList.add("mom-left-arm");
+			document.querySelector("#girl-right-arm").classList.add("daughter-right-arm");
+			document.querySelector("#girl-left-arm").classList.add("daughter-left-arm");
+			document.querySelector("#s-right-arm").classList.add("son-right-arm");
+			document.querySelector("#s-left-arm").classList.add("son-left-arm");
+	}
+})
+}, options);
 
 
 
