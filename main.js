@@ -25,6 +25,10 @@ const lamp = document.querySelector(".lamp");
 const snowflakes = document.querySelector(".snowflakes-wrapper");
 const chart = document.querySelector(".chart");
 const floor = document.querySelector(".floor");
+
+// variables for quiz
+let currentQuestion;
+let correctAnswers;
     
 const options = {
 	rootMargin: "-20px",
@@ -83,8 +87,7 @@ const observer3 = new IntersectionObserver(entries => {
 				document.querySelector("#gasping").classList.add("gasping-mouth");
 				document.querySelector("#d-right-arm").classList.add("dad-right-arm");
 				document.querySelector("#d-left-arm").classList.add("dad-left-arm");
-			} , 7000);			
-            // maybe switch out this setTimeout with CSS keyframe animation duration (@keyframes walking).
+			} , 7000);
 		}
 	})
 }, options);
@@ -202,7 +205,6 @@ const observer7 = new IntersectionObserver(entries => {
 
 const observer8 = new IntersectionObserver(entries => {
 	entries.forEach(entry=>{
-		// if intersecting, start frame 1
 		if(entry.intersectionRatio > 0.50){
             document.querySelector("#frame2").classList.add("frame2__closed");
 			document.querySelector("#frame2").style.transition = "";
@@ -213,9 +215,86 @@ const observer8 = new IntersectionObserver(entries => {
             document.querySelector(".window__horizontal").classList.add("W_Transparent");
             document.querySelector(".window__vertical").classList.add("W_Transparent");
             document.querySelector("#frame2").style.transform = "scale(9.5) translate(0, -9%)";
+            
+            setTimeout(() => {
+                document.querySelector(".quiz").style.display = "flex";
+            } , 1000);
+            setTimeout(() => {
+                document.querySelector(".quiz").style.opacity = "1";
+            } , 1010);
+
+            currentQuestion = 1;
+            correctAnswers = 0;
 		}
 	})
 }, options);
+
+// When user clicks on a quiz answer, it will run this every time with different answerNumber depending on which button was clicked.
+function answer(answerNumber) {
+    const q1ans = 2;
+    const q2ans = 1;
+    const q3ans = 3;
+    const question = document.querySelector(".quiz__title");
+    const ans1 = document.querySelector("#ans1");
+    const ans2 = document.querySelector("#ans2");
+    const ans3 = document.querySelector("#ans3");
+
+    // if current question is 1, check if answer is correct and update question and answers
+    if (currentQuestion === 1) {
+        if (answerNumber === q1ans) {
+            document.querySelectorAll(".light_bottom").forEach((item) => {
+                item.classList.remove("lights-off");
+            });
+            // adds to correct answers to be checked at the end
+            correctAnswers++;
+        }
+
+        question.textContent = "Energy is the dominant contributor to climate change. How many per cent of global greenhouse emissions are they accountable for?";
+        ans1.textContent = "60%";
+        ans2.textContent = "50%";
+        ans3.textContent = "70%";
+        currentQuestion++;
+
+    } else if (currentQuestion === 2) {
+        if (answerNumber === q2ans) {
+            document.querySelectorAll(".light_top").forEach((item) => {
+                item.classList.remove("lights-off");
+            });
+            correctAnswers++;
+        }
+
+        question.textContent = "How many deaths did indoor air pollution from using combustible fuels for household energy cause in 2012?";
+        ans1.textContent = "2.3 million";
+        ans2.textContent = "3.6 million";
+        ans3.textContent = "4.5 million";
+        currentQuestion++;
+
+    } else if (currentQuestion === 3) {
+        if (answerNumber === q3ans) {
+            document.querySelectorAll(".light_garage").forEach((item) => {
+                item.classList.remove("lights-off");
+            });
+            correctAnswers++;
+        }
+
+        document.querySelector(".quiz__answers").style.display = "none";
+
+        // checks how many correct answers there are and updates the title accordingly
+        if (correctAnswers === 3) {
+            document.querySelector(".quiz__title").textContent = "Congratulations! You turned all the lights on!";
+        } else if (correctAnswers === 2) {
+            document.querySelector(".quiz__title").textContent = "Good effort! You almost turned all the power back on!";
+        } else if (correctAnswers === 1) {
+            document.querySelector(".quiz__title").textContent = "You got one of the lights on. Thats more than zero!";
+        } else {
+            document.querySelector(".quiz__title").textContent = "Your knowledge has no power. You couldn't power a single light.";
+        }
+
+    } else {
+        // if question is other than 1-3, log error
+        console.log("error");
+    }
+}
 
 
 observer1.observe(frame1);
