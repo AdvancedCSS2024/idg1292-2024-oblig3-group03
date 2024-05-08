@@ -26,8 +26,7 @@ body {
   left: 35%;
   top: 10%;
   width: 50%;
-  -webkit-backdrop-filter: blur(5px) brightness(0.8);
-          backdrop-filter: blur(5px) brightness(0.8);
+  backdrop-filter: blur(5px) brightness(0.8);
   text-align: left;
   color: white;
   border-radius: 1rem;
@@ -39,12 +38,11 @@ body {
   left: 35%;
   top: 10%;
   width: 50%;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  color: rgb(254, 255, 232);
+  backdrop-filter: blur(10px);
+  color: #feffe8;
   text-align: left;
   padding: 1rem;
-  text-shadow: 0px 0px 20px rgb(88, 91, 40);
+  text-shadow: 0px 0px 20px #585b28;
   border-radius: 1rem;
 }
 
@@ -73,6 +71,7 @@ body {
   width: 40vh;
   transition: transform 7s;
 }
+
 .lamp__wire {
   background-color: #000;
   height: 40%;
@@ -80,6 +79,7 @@ body {
   position: absolute;
   left: 24%;
 }
+
 .lamp__hood {
   position: absolute;
   background-color: #9b1414;
@@ -91,6 +91,7 @@ body {
   left: 0;
   z-index: 3;
 }
+
 .lamp__reflector {
   position: absolute;
   background-color: #6c1010;
@@ -102,6 +103,7 @@ body {
   left: 0;
   z-index: 1;
 }
+
 .lamp__bulb {
   position: absolute;
   background-color: #dad709;
@@ -112,6 +114,7 @@ body {
   z-index: 2;
   left: 20%;
 }
+
 .lamp__switch {
   position: absolute;
   background-color: #000;
@@ -121,8 +124,9 @@ body {
   left: 15%;
   z-index: 2;
 }
+
 .lamp__switch::after {
-  content: "";
+  content: '';
   position: absolute;
   background-color: #000;
   height: 20%;
@@ -131,6 +135,7 @@ body {
   left: -130%;
   border-radius: 100%;
 }
+
 .lamp__streaks {
   position: absolute;
   background-color: #dad709;
@@ -140,8 +145,9 @@ body {
   z-index: 2;
   left: 24.5%;
 }
+
 .lamp__streaks::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: #dad709;
   height: 100%;
@@ -151,8 +157,9 @@ body {
   z-index: 2;
   transform: rotate(30deg);
 }
+
 .lamp__streaks::after {
-  content: "";
+  content: '';
   position: absolute;
   background-color: #dad709;
   height: 100%;
@@ -174,18 +181,21 @@ body {
     transform: scaleY(1);
   }
 }
+
 .lamp-off .lamp__bulb {
   background-color: #707070;
-  transition-delay: 0.3s;
+  transition-delay: .3s;
   transition-property: background-color;
 }
+
 .lamp-off .lamp__streaks {
   opacity: 0;
-  transition-delay: 0.3s;
+  transition-delay: .3s;
   transition-property: opacity;
 }
+
 .lamp-off .lamp__switch {
-  animation: stretch 0.5s;
+  animation: stretch .5s;
 }
 
 #dad, #mom {
@@ -213,6 +223,7 @@ body {
     transform: translateY(0) scaleX(-1);
   }
 }
+
 .dad_walking-backwards {
   animation: walkingBackwards 3s infinite;
 }
@@ -225,6 +236,7 @@ body {
     transform: translateY(0);
   }
 }
+
 /* DAD */
 /* Apply the animation to the smile path */
 .change-smile {
@@ -242,18 +254,30 @@ body {
     d: path("M63.65,94.53c6.96-11,22.61-15.28,34.16-9.27c3.83,1.97,7.16,4.95,9.55,8.56c-2.05-3.86-5.33-7.06-9.18-9.24c-11.63-6.59-28.33-2.02-34.52,9.94");
   }
 }
+
 .change-smileChildren {
   animation: changeSmileChildren 0.1s forwards; /* Apply the animation named 'changeSmileChildren' over 0.1 seconds */
 }
 
 @keyframes changeSmileChildren {
   0% { /* Start with the smiling face */
+  }
+
+.change-smileChildren {
+  animation: changeSmileChildren 0.1s forwards;
+  /* Apply the animation named 'changeSmileChildren' over 0.1 seconds */
+}
+
+@keyframes changeSmileChildren {
+  0% {
+    /* Start with the smiling face */
     d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94");
   }
   100% {
     d: path("M35.50,64.43c5.5-8.5,16-12,24.5-7c1.5,0.75,2.75,1.88,3.75,3.25c-1-1.88-2.5-3.42-4.25-4.5c-8.25-4.19-20.25-1.25-24.5,7.5");
   }
 }
+  
 #mom {
   right: 20vw;
 }
@@ -280,17 +304,20 @@ body {
   height: 24vh;
   position: relative;
 }
+
 .window-wrapper {
   position: absolute;
   z-index: 2;
   transition: transform 7s;
 }
+
 .window__top {
   position: absolute;
   background-color: #555555;
   width: 100%;
   height: 4%;
 }
+
 .window__bottom {
   position: absolute;
   background-color: #555555;
@@ -298,6 +325,7 @@ body {
   height: 4%;
   bottom: 0;
 }
+
 .window__right {
   position: absolute;
   background-color: #555555;
@@ -305,12 +333,14 @@ body {
   height: 100%;
   right: 0;
 }
+
 .window__left {
   position: absolute;
   background-color: #555555;
   width: 4%;
   height: 100%;
 }
+
 .window__horizontal {
   position: absolute;
   background-color: #555555;
@@ -318,6 +348,7 @@ body {
   height: 4%;
   top: 47%;
 }
+
 .window__vertical {
   position: absolute;
   background-color: #555555;
@@ -325,6 +356,14 @@ body {
   height: 100%;
   top: 1;
   left: 47%;
+}
+
+.W_Transparent {
+  opacity: 0;
+}
+
+.W_Transition {
+  transition: opacity 1.2s;
 }
 
 @keyframes snowing {
@@ -338,6 +377,7 @@ body {
     transform: translateY(745%);
   }
 }
+
 .snowflakes {
   margin: 20px;
   width: 24vh;
@@ -347,11 +387,13 @@ body {
   background-color: white;
   overflow: hidden;
 }
+
 .snowflakes-wrapper {
   position: absolute;
   z-index: 1;
   transition: transform 7s;
 }
+
 .snowflakes .snowflakes1 {
   position: absolute;
   width: 12%;
@@ -359,6 +401,7 @@ body {
   top: 17%;
   animation: snowing 5s ease-out infinite;
 }
+
 .snowflakes .snowflakes2 {
   position: absolute;
   width: 12%;
@@ -366,6 +409,7 @@ body {
   top: 17%;
   animation: snowing 10s linear infinite;
 }
+
 .snowflakes .snowflakes3 {
   position: absolute;
   width: 13%;
@@ -373,6 +417,7 @@ body {
   top: 17%;
   animation: snowing 7s linear infinite;
 }
+
 .snowflakes .snowflakes4 {
   position: absolute;
   width: 12%;
@@ -380,6 +425,7 @@ body {
   top: 17%;
   animation: snowing 3s linear infinite;
 }
+
 .snowflakes .snowflakes5 {
   position: absolute;
   width: 10%;
@@ -387,6 +433,7 @@ body {
   top: 17%;
   animation: snowing 7s linear infinite;
 }
+
 .snowflakes .snowflakes6 {
   position: absolute;
   width: 10%;
@@ -394,6 +441,7 @@ body {
   top: 17%;
   animation: snowing 7s ease-out infinite;
 }
+
 .snowflakes .snowflakes7 {
   position: absolute;
   width: 8%;
@@ -401,6 +449,7 @@ body {
   top: 17%;
   animation: snowing 10s linear infinite;
 }
+
 .snowflakes .snowflakes8 {
   position: absolute;
   width: 6%;
@@ -408,6 +457,7 @@ body {
   top: 17%;
   animation: snowing 10s ease-in-out infinite;
 }
+
 .snowflakes .snowflakes9 {
   position: absolute;
   width: 10%;
@@ -415,12 +465,29 @@ body {
   top: 17%;
   animation: snowing 4s linear infinite;
 }
+
 .snowflakes .snowflakes10 {
   position: absolute;
   width: 8%;
   left: 75%;
   top: 17%;
   animation: snowing 3s ease-out infinite;
+}
+
+#house_bg {
+  transform: translateY(2%);
+}
+
+.night_filter {
+  filter: brightness(0.4);
+}
+
+.lights-off {
+  filter: brightness(0.3) grayscale(100%);
+}
+
+#L_WINDOWS {
+  filter: brightness(1);
 }
 
 .floor {
@@ -436,13 +503,13 @@ body {
 }
 
 .frame2__closed {
-  transform: scale(18) translate(0, 0);
+  transform: scale(9.5) translate(0, -6%);
 }
 
 .title {
   font-size: 8rem;
   margin: 20px 0 0 10px;
-  transition: opacity 0.2s;
+  transition: opacity .2s;
   position: absolute;
   z-index: 100;
   width: 100%;
@@ -450,6 +517,7 @@ body {
   top: 30%;
   font-family: Garamond;
 }
+
 .title__closed {
   opacity: 0;
 }
@@ -460,21 +528,25 @@ body {
   height: 24vh;
   position: relative;
 }
+
 .dollar-wrapper {
   position: absolute;
 }
+
 .dollar .dollar1 {
   position: absolute;
   width: 10%;
   left: 65%;
   top: 17%;
 }
+
 .dollar .dollar2 {
   position: absolute;
   width: 10%;
   left: 75%;
   top: 17%;
 }
+
 .dollar .dollar3 {
   position: absolute;
   width: 10%;
@@ -495,16 +567,19 @@ body {
   transform: translateX(-100vw);
   transition: transform 7s;
 }
+
 .chart > p {
   position: absolute;
   left: 27%;
 }
 
-.hide-smile { /* Dad's smile is hidden */
+.hide-smile {
+  /* Dad's smile is hidden */
   display: none;
 }
 
-.gasping-mouth { /* Dad's mouth, gasping */
+.gasping-mouth {
+  /* Dad's mouth, gasping */
   position: relative;
   left: 40%;
   top: 23%;
@@ -591,6 +666,7 @@ body {
     text-shadow: none;
   }
 }
+
 .light-effect {
   color: #d2ef12;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff715, 0 0 70px #e9f010, 0 0 80px #ffef0e, 0 0 100px #eccf12, 0 0 150px #efcb18;
@@ -629,4 +705,4 @@ body {
   filter: drop-shadow(0px 5px 5px black) brightness(0);
   opacity: 0;
   transition: filter 2s;
-}/*# sourceMappingURL=style.css.map */
+  }

@@ -1,5 +1,7 @@
 setTimeout(() => {
     document.querySelector("#frame2").classList.add("frame2__transition");
+    document.querySelector(".window__horizontal").classList.add("W_Transition");
+    document.querySelector(".window__vertical").classList.add("W_Transition");
     }
 , 1000);
 
@@ -35,6 +37,9 @@ const observer1 = new IntersectionObserver(entries => {
 		if(entry.intersectionRatio > 0.50){
             document.querySelector("#frame2").classList.add("frame2__closed");
             document.querySelector(".title").classList.remove("title__closed");
+
+            document.querySelector(".window__horizontal").classList.add("W_Transparent");
+            document.querySelector(".window__vertical").classList.add("W_Transparent");
 		}
 	})
 }, options);
@@ -52,6 +57,10 @@ const observer2 = new IntersectionObserver(entries => {
             document.querySelector(".window-wrapper").classList.remove("moveOut");
             snowflakes.classList.remove("moveOut");
             chart.classList.remove("chartIn");
+
+            document.querySelector(".window__horizontal").classList.remove("W_Transparent");
+            document.querySelector(".window__vertical").classList.remove("W_Transparent");
+            
 		}
 	})
 }, options);
@@ -94,6 +103,7 @@ const observer4 = new IntersectionObserver(entries => {
             document.querySelector(".window-wrapper").classList.remove("moveOut");
             document.querySelector(".snowflakes-wrapper").classList.remove("moveOut");
             document.querySelector(".chart").classList.remove("chartIn");
+            document.querySelector(".darkness").classList.remove("night_filter");
             document.querySelector(".floor").style.transform = "translateX(-100vw)";
 
             setTimeout(() => {
@@ -123,6 +133,21 @@ const observer5 = new IntersectionObserver(entries => {
                 document.querySelector("#d-right-arm").classList.remove("dad-right-arm");
                 document.querySelector("#frame2").style.filter = "brightness(0)";
                 document.querySelector("#frame2").style.transition = "filter 1s";
+                document.querySelectorAll(".darkness").forEach((item) => {
+                    item.classList.add("night_filter");
+                })
+
+                document.querySelectorAll(".light_garage").forEach((item) => {
+                    item.classList.add("lights-off");
+                })
+
+                document.querySelectorAll(".light_top").forEach((item) => {
+                    item.classList.add("lights-off");
+                })
+
+                document.querySelectorAll(".light_bottom").forEach((item) => {
+                    item.classList.add("lights-off");
+                })
             } , 2000); 
 		}
 	})
@@ -175,6 +200,22 @@ const observer7 = new IntersectionObserver(entries => {
 })
 }, options);
 
+const observer8 = new IntersectionObserver(entries => {
+	entries.forEach(entry=>{
+		// if intersecting, start frame 1
+		if(entry.intersectionRatio > 0.50){
+            document.querySelector("#frame2").classList.add("frame2__closed");
+			document.querySelector("#frame2").style.transition = "";
+			document.querySelector("#frame2").classList.add("frame2__transition");
+			document.querySelector(".table-with-candles").remove(".table-with-candles");
+			document.querySelector(".darkOverlay").remove(".darkOverlay");
+			
+            document.querySelector(".window__horizontal").classList.add("W_Transparent");
+            document.querySelector(".window__vertical").classList.add("W_Transparent");
+            document.querySelector("#frame2").style.transform = "scale(9.5) translate(0, -9%)";
+		}
+	})
+}, options);
 
 
 observer1.observe(frame1);
