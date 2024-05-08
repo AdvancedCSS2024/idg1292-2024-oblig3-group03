@@ -5,6 +5,8 @@ body {
     width: 100vw;
 }
 
+
+
 #fixedPoint {
     position: fixed;
     width: 100vw;
@@ -34,17 +36,31 @@ body {
     text-shadow: 0px 0px 20px #ffffff;
 }
 
-.textTwo {
-    left: 35%;
-    top: 10%;
-    width: 50%;
-    backdrop-filter: blur(10px);
-    color: rgb(254, 255, 232);
-    text-align: left;
-    padding: 1rem;
-    text-shadow: 0px 0px 20px rgb(88, 91, 40);
-    border-radius: 1rem;
+@media screen and (max-width: 375px) {
+
+
+    .people {
+        width: 150% !important;
+    }
+
+    #dad {
+        left:4vw !important; 
+    }
+
+    #son {
+        left:50vw !important;
+    }
+
+    #daughter {
+        right:20vw !important;
+    }
+
+    #mom {
+        right:7vw !important;
+    }
 }
+
+
 
 
 #frames {
@@ -508,13 +524,13 @@ body {
 .title {
     font-size: 8rem;
     margin: 20px 0 0 10px;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     position: absolute;
     z-index: 100;
     width: 100%;
     text-align: center;
     top: 30%;
-    font-family: Garamond;
+    font-family: Garamond, sans-serif;
 
     &__closed {
         opacity: 0;

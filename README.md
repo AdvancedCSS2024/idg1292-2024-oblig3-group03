@@ -49,5 +49,6 @@ Wooden floor texture: https://free-3dtextureshd.com/download/natural-wooden-floo
 Wallpaper texture: https://www.deviantart.com/fabooguy/art/Rough-Wallpaper-Texture-Tileable-2048x2048-421889537
 
 UN global goals:
+https://sdgs.un.org/goals/goal7
 https://www.jointsdgfund.org/sustainable-development-goals/goal-7-affordable-and-clean-energy
 https://www.globalgoals.org/take-action/
