@@ -2,9 +2,12 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=14864443&assignment_repo_type=AssignmentRepo)
 
 ##Points discussed during the brainstorming session:
-We started the project by drawing up our story by hand. We created 7 windows, following a family of four who no longer can afford to pay the power/electricity bill.
+We started the project by drawing up our story by hand. We created 7 windows, following a family of four who no longer can afford to pay the power/electricity bill. 
 
-We started the project using group3-temp, as we had some trouble creating a group in github classroom.
+##Storyboard: 
+The storyboard we created is added in assets called storyboard.jpg.
+
+We started the project using group3-temp, as we had some trouble creating a group in github classroom. When we got access to the correct github, we created a branch each. 
 
 Start: 
 Used intersection observer in JS in all our frames. We used it to make the window appear bigger with the title "the lightswitch" as the starting point of our webpage. When the user scroll down, the family image will appear, and the title will blur out. We used CSS drawing to create the lamp and the window, and adobe illustrator to draw the family and the snowflakes. 
@@ -21,8 +24,15 @@ For the arrow in the chart we used SVG drawing.
 Transitioning to frame 4:
 We used keyframes and intersection to make the father look sad.
 
+Frame 6:
+We used radial-gradient in the background to illustrate that the only source of electricity and light is from the candles, creating a darker look.
+We also added shadow on the table with the candles to create a more 3D look, and making the shapes of the table more clearly.
+
 Frame 7:
-Used transform translate to edit the arms on the family, so it looks like they are trying to keep warm on the candles.
+Used transform: translate, scale and rotate to edit the arms on the family, so it looks like they are trying to keep warm on the candles.
+
+Frame 8:
+We used the same transition on frame 8 as we used in frame 2 (where the image moves from the window and into the living room), to get back to the window again. The table and dark overlay has been removed using javascript.
 
 
 We used !important to get the dad to walk up to the lamp to turn it off. We realised that we used id's for the people, and therefore when we used class to transition the dad, the id would overrun it and therefor it would not work without using !important in dadTurnOffLamp.
@@ -31,8 +41,6 @@ Used keyframes to change the smile of the people.
 
 
 
-##Storyboard: 
-See assets for storyboard.jpg
 
 Sources:
 
