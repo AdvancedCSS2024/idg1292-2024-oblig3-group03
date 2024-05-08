@@ -345,6 +345,14 @@ body {
     }
   }
 
+  .W_Transparent {
+    opacity:0;
+  }
+
+  .W_Transition {
+    transition:opacity 1.2s;
+  }
+
 @keyframes snowing {
     0% {transform: translateY(-200%);}
     50% {transform: translateY(225%);}
@@ -464,6 +472,22 @@ body {
     }
 }
 
+#house_bg {
+    transform: translateY(2%)
+}
+.night_filter {
+    filter: brightness(0.4);
+}
+
+.lights-off {
+    filter:brightness(0.3)grayscale(100%);
+}
+
+// use the filter:brightness to make the windows darker and brighter after the quiz
+#L_WINDOWS {
+    filter: brightness(1.0);
+}
+
 .floor {
     width: 200%;
     height: 45vh;
@@ -478,7 +502,7 @@ body {
 
 
 .frame2__closed {
-    transform: scale(18) translate(0, 0);
+    transform: scale(9.5) translate(0, -6%);
 }
 
 .title {
