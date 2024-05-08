@@ -6,7 +6,6 @@ body {
 }
 
 
-
 #fixedPoint {
     position: fixed;
     width: 100vw;
@@ -496,7 +495,7 @@ body {
 }
 
 .lights-off {
-    filter:brightness(0.3)grayscale(100%);
+    filter: brightness(0.3)grayscale(100%);
 }
 
 // use the filter:brightness to make the windows darker and brighter after the quiz
