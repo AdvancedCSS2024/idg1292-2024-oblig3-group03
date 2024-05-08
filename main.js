@@ -22,6 +22,7 @@ const daughter = document.querySelector("#daughter");
 const lamp = document.querySelector(".lamp");
 const snowflakes = document.querySelector(".snowflakes-wrapper");
 const chart = document.querySelector(".chart");
+const floor = document.querySelector(".floor");
     
 const options = {
 	rootMargin: "-20px",
@@ -43,14 +44,14 @@ const observer2 = new IntersectionObserver(entries => {
 		if(entry.intersectionRatio > 0.50){
 			document.querySelector("#frame2").classList.remove("frame2__closed");
             document.querySelector(".title").classList.add("title__closed");
-            document.querySelector("#dad").classList.remove("dad_walking");
-            document.querySelector("#mom").classList.remove("moveOut");
-            document.querySelector("#son").classList.remove("moveOut");
-            document.querySelector("#daughter").classList.remove("moveOut");
-            document.querySelector(".lamp").classList.remove("moveOut");
+            dad.classList.remove("dad_walking");
+            mom.classList.remove("moveOut");
+            son.classList.remove("moveOut");
+            daughter.classList.remove("moveOut");
+            lamp.classList.remove("moveOut");
             document.querySelector(".window-wrapper").classList.remove("moveOut");
-            document.querySelector(".snowflakes-wrapper").classList.remove("moveOut");
-            document.querySelector(".chart").classList.remove("chartIn");
+            snowflakes.classList.remove("moveOut");
+            chart.classList.remove("chartIn");
 		}
 	})
 }, options);
