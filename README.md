@@ -32,6 +32,7 @@ Used keyframes to change the smile of the people.
 
 
 ##Storyboard: 
+See assets for storyboard.jpg
 
 Sources:
 

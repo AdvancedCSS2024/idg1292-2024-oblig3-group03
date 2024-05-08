@@ -175,6 +175,19 @@ const observer7 = new IntersectionObserver(entries => {
 })
 }, options);
 
+const observer8 = new IntersectionObserver(entries => {
+	entries.forEach(entry=>{
+		// if intersecting, start frame 1
+		if(entry.intersectionRatio > 0.50){
+            document.querySelector("#frame2").classList.add("frame2__closed");
+			document.querySelector("#frame2").style.transition = "";
+			document.querySelector("#frame2").classList.add("frame2__transition");
+			document.querySelector(".table-with-candles").remove(".table-with-candles");
+			document.querySelector(".darkOverlay").remove(".darkOverlay");
+			
+		}
+	})
+}, options);
 
 
 observer1.observe(frame1);
