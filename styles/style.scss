@@ -728,3 +728,42 @@ body {
     transition: filter 2s;
 }
 
+.quiz {
+    position: fixed;
+    top: 20vh;
+    z-index: 101;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: opacity 2s;
+    gap: 2rem;
+    display: none;
+    opacity: 0;
+
+    &__title {
+        font-family: Garamond, sans-serif;
+        font-size: 2rem;
+        width: 50%;
+        color: #ffffff;
+    }
+
+
+    &__answer {
+        border: none;
+        font-family: Garamond, sans-serif;
+        font-size: 1.2rem;
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: #0e444ac6;
+        color: #ffffff;
+        border-radius: 1rem;
+        z-index: 101;
+        cursor: pointer;
+        transition: background-color .2s;
+
+        &:hover {
+            background-color: #0e444a;
+        }
+    }
+}
