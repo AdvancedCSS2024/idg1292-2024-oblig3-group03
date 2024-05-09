@@ -1,3 +1,4 @@
+// Disables some animations on load, but reenables them after 1 second to prevent them from playing on load.
 setTimeout(() => {
     document.querySelector("#frame2").classList.add("frame2__transition");
     document.querySelector(".window__horizontal").classList.add("W_Transition");
@@ -15,8 +16,8 @@ const frame5 = document.querySelector("#startFrame5");
 const frame6 = document.querySelector("#startFrame6");
 const frame7 = document.querySelector("#startFrame7");
 const frame8 = document.querySelector("#startFrame8");
-const frame9 = document.querySelector("#startFrame9");
 
+// variables for animations
 const dad = document.querySelector("#dad");
 const mom = document.querySelector("#mom");
 const son = document.querySelector("#son");
@@ -44,6 +45,7 @@ const observer1 = new IntersectionObserver(entries => {
 
             document.querySelector(".window__horizontal").classList.add("W_Transparent");
             document.querySelector(".window__vertical").classList.add("W_Transparent");
+            document.querySelector("#gasping").setAttribute("visibility", "hidden");
 		}
 	})
 }, options);
@@ -84,7 +86,7 @@ const observer3 = new IntersectionObserver(entries => {
             setTimeout(() => {
                 document.querySelector("#dad").classList.remove("dad_walking");
 				document.querySelector("#dad-smile").classList.add("hide-smile");
-				document.querySelector("#gasping").classList.add("gasping-mouth");
+                document.querySelector("#gasping").setAttribute("visibility", "visible");
 				document.querySelector("#d-right-arm").classList.add("dad-right-arm");
 				document.querySelector("#d-left-arm").classList.add("dad-left-arm");
 			} , 7000);
@@ -95,7 +97,7 @@ const observer3 = new IntersectionObserver(entries => {
 const observer4 = new IntersectionObserver(entries => { 
 	entries.forEach(entry=>{
 		if(entry.intersectionRatio > 0.50){
-			document.querySelector("#gasping").classList.remove("gasping-mouth");
+            document.querySelector("#gasping").setAttribute("visibility", "hidden");
 			document.querySelector("#dad-smile").classList.remove("hide-smile");
 			document.querySelector("#dad-smile").classList.add("change-smile");
 			document.querySelector("#d-right-arm").classList.remove("dad-right-arm");
@@ -136,6 +138,8 @@ const observer5 = new IntersectionObserver(entries => {
                 document.querySelector("#d-right-arm").classList.remove("dad-right-arm");
                 document.querySelector("#frame2").style.filter = "brightness(0)";
                 document.querySelector("#frame2").style.transition = "filter 1s";
+            } , 2000); 
+            setTimeout(() => {
                 document.querySelectorAll(".darkness").forEach((item) => {
                     item.classList.add("night_filter");
                 })
@@ -151,7 +155,7 @@ const observer5 = new IntersectionObserver(entries => {
                 document.querySelectorAll(".light_bottom").forEach((item) => {
                     item.classList.add("lights-off");
                 })
-            } , 2000); 
+            } , 3000);
 		}
 	})
 }, options);
@@ -167,19 +171,23 @@ const observer6 = new IntersectionObserver(entries => {
 			
 
             dad.classList.remove("dadTurnOffLamp");
-            dad.style.bottom = "22vh";
-            dad.style.left = "36vw";
+            /* dad.style.bottom = "22vh";
+            dad.style.left = "36vw"; */
             mom.classList.remove("moveOut");
-            mom.style.bottom = "22vh";
-            mom.style.right = "37vw";
+            /* mom.style.bottom = "22vh";
+            mom.style.right = "37vw"; */
             son.classList.remove("moveOut");
-            son.style.left = "43vw";
+            /* son.style.left = "43vw"; */
             daughter.classList.remove("moveOut");
-            daughter.style.right = "45vw";
+            dad.classList.add("dadWithTable");
+            mom.classList.add("momWithTable");
+            son.classList.add("sonWithTable");
+            daughter.classList.add("daughterWithTable");
+            /* daughter.style.right = "45vw";
             mom.style.transition = "none";
             dad.style.transition = "none";
             son.style.transition = "none";
-            daughter.style.transition = "none";
+            daughter.style.transition = "none"; */
 
 			document.querySelector("#mom-smile").classList.add("change-smile");
 			document.querySelector("#son-smile").classList.add("change-smileChildren");
@@ -215,7 +223,7 @@ const observer8 = new IntersectionObserver(entries => {
 			
             document.querySelector(".window__horizontal").classList.add("W_Transparent");
             document.querySelector(".window__vertical").classList.add("W_Transparent");
-            document.querySelector("#frame2").style.transform = "scale(9.5) translate(0, -9%)";
+            document.querySelector("#frame2").classList.add("frame2__closedForQuiz");
             
             setTimeout(() => {
                 document.querySelector(".quiz").style.display = "flex";
@@ -306,4 +314,3 @@ observer5.observe(frame5);
 observer6.observe(frame6);
 observer7.observe(frame7);
 observer8.observe(frame8);
-observer9.observe(frame9);

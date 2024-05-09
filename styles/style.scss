@@ -35,29 +35,6 @@ body {
     text-shadow: 0px 0px 20px #ffffff;
 }
 
-@media screen and (max-width: 375px) {
-
-
-    .people {
-        width: 150% !important;
-    }
-
-    #dad {
-        left:4vw !important; 
-    }
-
-    #son {
-        left:50vw !important;
-    }
-
-    #daughter {
-        right:20vw !important;
-    }
-
-    #mom {
-        right:7vw !important;
-    }
-}
 
 
 
@@ -87,6 +64,7 @@ body {
     height: 40vh;
     width: 40vh;
     transition: transform 7s;
+    z-index: 3;
 
     &__wire {
         background-color: #000;
@@ -207,7 +185,7 @@ body {
     }
 }
 
-#dad, #mom {
+.dad, .mom {
     position: absolute;
     height: 35vh;
     bottom: 30vh;
@@ -215,7 +193,7 @@ body {
     transition: transform 7s, left 3s, bottom 3s;
 }
 
-#dad {
+.dad {
     left: 20vw;
     z-index: 3;
 }
@@ -278,11 +256,11 @@ body {
 }
       
 
-#mom {
+.mom {
     right: 20vw;
 }
 
-#son, #daughter {
+.son, .daughter {
     position: absolute;
     height: 25vh;
     bottom: 30vh;
@@ -290,13 +268,16 @@ body {
     transition: transform 7s;
 }
 
-#son {
+.son {
     left: 39vw;
 }
 
-#daughter {
+.daughter {
     right: 39vw;
 }
+
+
+
 
 .window {
     margin: 20px;
@@ -592,26 +573,6 @@ body {
     display: none;
 }
 
-.gasping-mouth {    /* Dad's mouth, gasping */
-    position: relative;
-    left:40%;
-    top:23%;
-    width: 12%;
-    height: 4%;
-    border: 3px solid #000000;
-    background-color: #000;
-    border-radius: 35px;
-
-    z-index: 5;
-}
-
-#gasping-wrapper {
-    width: 121.162px;
-    height: 35vh;
-    position: absolute;
-    left: 20vw;
-    bottom: 30vh;
-}
 
 /* For when the dad sees the bill and gasping */
 .dad-right-arm { 
@@ -698,9 +659,33 @@ body {
 }
 
 .dadTurnOffLamp {
-    left: 41vw!important;
-    bottom: 40vh!important;
+    left: 41vw;
+    bottom: 40vh;
 }
+
+.dadWithTable {
+    bottom: 22vh;
+    left: 36vw;
+    transition: none;
+}
+
+.sonWithTable {
+    left: 43vw;
+    transition: none;
+}
+
+.daughterWithTable {
+    right: 45vw;
+    transition: none;
+}
+
+.momWithTable {
+    bottom: 22vh;
+    right: 37vw;
+    transition: none;
+}
+
+
 
 .darkOverlay {
     position: fixed;
@@ -726,6 +711,10 @@ body {
     filter: drop-shadow(0px 5px 5px black) brightness(0);
     opacity: 0;
     transition: filter 2s;
+}
+
+.frame2__closedForQuiz {
+    transform: scale(9.5) translate(0, -9%);
 }
 
 .quiz {
@@ -767,3 +756,115 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    .dad {
+        left: 0;
+    }
+
+    .mom {
+        right: 0;
+    }
+    .son {
+        left: 27vw;
+    }
+    .daughter {
+        right: 29vw;
+    }
+
+    .dadTurnOffLamp {
+        left: 26vw;
+    }
+
+    .dadWithTable {
+        left: 0vw;
+        bottom: 15vh;
+    }
+    .sonWithTable {
+        left: 27vw;
+        bottom: 23vh;
+    }
+    .daughterWithTable {
+        right: 29vw;
+        bottom: 23vh;
+    }
+    .momWithTable {
+        right: 0vw;
+        bottom: 15vh;
+    }
+
+    .title {
+        top: 20%;
+        font-size: 7rem;
+        margin: 0;
+    }
+
+    .chart {
+        transform: translateX(-110vw);
+    }
+
+    .chartIn {
+        transform: translateX(-10vw);
+    }
+
+    .quiz {
+        flex-direction: column;
+        top: 0;
+        align-items: center;
+        margin: 1rem;
+
+        &__title {
+            width: 100%;
+        }
+    }
+
+    .frame2__closed {
+        transform: scale(6.5) translate(-12%, -7%);
+    }
+
+    .frame2__closedForQuiz {
+        transform: scale(6.5) translate(-12%, -7%);
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    /* styles to apply if a user's device settings are set to reduced motion */
+    .snowflakes1 {
+        animation: snowing 15s ease-out infinite!important;
+    }
+    .snowflakes2 {
+        animation: snowing 20s linear infinite!important;
+    }
+    .snowflakes3 {
+        animation: snowing 17s linear infinite!important;
+    }
+    .snowflakes4 {
+        animation: snowing 13s linear infinite!important;
+    }
+    .snowflakes5 {
+        animation: snowing 17s linear infinite!important;
+    }
+    .snowflakes6 {
+        animation: snowing 17s ease-out infinite!important;
+    }
+    .snowflakes7 {
+        animation: snowing 20s linear infinite!important;
+    }
+    .snowflakes8 {
+        animation: snowing 20s ease-in-out infinite!important;
+    }
+    .snowflakes9 {
+        animation: snowing 14s linear infinite!important;
+    }
+    .snowflakes10 {
+        animation: snowing 13s ease-out infinite!important;
+    }
+
+    .light-effect {
+        animation: none;
+    }
+
+    .frame2__transition {
+        transition: transform 10s;
+    }
+  }
