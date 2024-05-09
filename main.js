@@ -164,6 +164,7 @@ const observer6 = new IntersectionObserver(entries => {
             document.querySelector("#frame2").style.filter = "brightness(1)";
             document.querySelector(".table-with-candles").style.opacity = "1";
             document.querySelector(".table-with-candles").style.filter = "drop-shadow(0px 5px 5px black) brightness(1)";
+			
 
             dad.classList.remove("dadTurnOffLamp");
             dad.style.bottom = "22vh";

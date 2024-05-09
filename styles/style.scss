@@ -5,6 +5,7 @@ body {
     width: 100vw;
 }
 
+
 #fixedPoint {
     position: fixed;
     width: 100vw;
@@ -34,17 +35,31 @@ body {
     text-shadow: 0px 0px 20px #ffffff;
 }
 
-.textTwo {
-    left: 35%;
-    top: 10%;
-    width: 50%;
-    backdrop-filter: blur(10px);
-    color: rgb(254, 255, 232);
-    text-align: left;
-    padding: 1rem;
-    text-shadow: 0px 0px 20px rgb(88, 91, 40);
-    border-radius: 1rem;
+@media screen and (max-width: 375px) {
+
+
+    .people {
+        width: 150% !important;
+    }
+
+    #dad {
+        left:4vw !important; 
+    }
+
+    #son {
+        left:50vw !important;
+    }
+
+    #daughter {
+        right:20vw !important;
+    }
+
+    #mom {
+        right:7vw !important;
+    }
 }
+
+
 
 
 #frames {
@@ -241,11 +256,11 @@ body {
   @keyframes changeSmile {
     0% {
       /* Start with the smiling face */
-      d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94");
+      d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94")
     }
     100% {
       /* Ends with the frown face */
-      d: path("M63.65,94.53c6.96-11,22.61-15.28,34.16-9.27c3.83,1.97,7.16,4.95,9.55,8.56c-2.05-3.86-5.33-7.06-9.18-9.24c-11.63-6.59-28.33-2.02-34.52,9.94");
+      d: path("M63.65,94.53c6.96-11,22.61-15.28,34.16-9.27c3.83,1.97,7.16,4.95,9.55,8.56c-2.05-3.86-5.33-7.06-9.18-9.24c-11.63-6.59-28.33-2.02-34.52,9.94")
     }
   }
 
@@ -255,10 +270,10 @@ body {
   
 @keyframes changeSmileChildren {
     0% { /* Start with the smiling face */
-        d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94");
+        d: path("M63.65,84.53c6.96,11,22.61,15.28,34.16,9.27,3.83-1.97,7.16-4.95,9.55-8.56-2.05,3.86-5.33,7.06-9.18,9.24-11.63,6.59-28.33,2.02-34.52-9.94")
     }
     100% {
-        d: path("M35.50,64.43c5.5-8.5,16-12,24.5-7c1.5,0.75,2.75,1.88,3.75,3.25c-1-1.88-2.5-3.42-4.25-4.5c-8.25-4.19-20.25-1.25-24.5,7.5");
+        d: path("M35.50,64.43c5.5-8.5,16-12,24.5-7c1.5,0.75,2.75,1.88,3.75,3.25c-1-1.88-2.5-3.42-4.25-4.5c-8.25-4.19-20.25-1.25-24.5,7.5")
     }
 }
       
@@ -480,7 +495,7 @@ body {
 }
 
 .lights-off {
-    filter:brightness(0.3)grayscale(100%);
+    filter: brightness(0.3)grayscale(100%);
 }
 
 // use the filter:brightness to make the windows darker and brighter after the quiz
@@ -508,7 +523,7 @@ body {
 .title {
     font-size: 8rem;
     margin: 20px 0 0 10px;
-    transition: opacity .2s;
+    transition: opacity 0.2s;
     position: absolute;
     z-index: 100;
     width: 100%;
