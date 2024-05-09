@@ -17,7 +17,7 @@ Frame 2:
 In frame 2 we used keyframe animation on the father so it looks like he's walking, and transition transform to move the rest of the family as well as the lamp, window and floor out of the screen, and placing the chart in the screen.
 
 Frame 3:
-We used keyframe and intersection observer to change the mouth of the father (display: none for the mouth, and css drawing to create the "gasp"), making him gasp when he sees the chart of the electricity bill as well as putting his arms up in shock.
+We used keyframe and intersection observer to change the mouth of the father (display: none for the mouth, only showing the gasping mouth), making him gasp when he sees the chart of the electricity bill as well as putting his arms up in shock.
 We used adobe Illustrator to draw the dollar-signs, and CSS drawing to draw the chartboard.
 For the arrow in the chart we used SVG drawing.
 
